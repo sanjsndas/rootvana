@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy - Rootvana</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        :root {
+            --primary-color: #3a5a40;
+            --secondary-color: #588157;
+            --accent-color: #a3b18a;
+            --light-color: #dad7cd;
+            --text-color: #2f3e46;
+            --white: #ffffff;
+            --dark-green: #344e41;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            color: var(--dark-green);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            margin-top: 2rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Layout */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 4rem 0;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-right: 0.5rem;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .logo-slogan {
+            font-size: 1rem;
+            color: var(--secondary-color);
+            margin-top: -0.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav li {
+            margin-left: 1.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            padding: 0.5rem;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a[aria-current="page"] {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        nav a[aria-current="page"]::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('p2.jpeg') no-repeat center center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 8rem 0;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Cookies Content */
+        .cookies-content {
+            background-color: var(--white);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .cookies-section {
+            margin-bottom: 3rem;
+        }
+
+        .cookies-point {
+            margin-bottom: 2rem;
+        }
+
+        /* Cookie Consent Banner */
+        .cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--dark-green);
+            color: var(--white);
+            padding: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cookie-consent p {
+            margin-bottom: 1rem;
+            flex: 1 1 100%;
+        }
+
+        .cookie-consent-buttons {
+            display: flex;
+            gap: 1rem;
+            width: 100%;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-green);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col a {
+            color: var(--light-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-col a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .footer-social a:hover {
+            background-color: var(--accent-color);
+            color: var(--dark-green);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-info-footer {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .contact-info-footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-active ul {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--white);
+                padding: 1rem;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-active li {
+                margin: 0 0 1rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .cookie-consent-buttons {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 576px) {
+            section {
+                padding: 2rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .cookies-content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🌱</span>
+                <span class="logo-text">Rootvana</span>
+                <span class="logo-slogan">Balance below. Beauty above.</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" tabindex="0">Home</a></li>
+                    <li><a href="privacy.html" tabindex="0">Privacy</a></li>
+                    <li><a href="terms.html" tabindex="0">Terms & conditions</a></li>
+                    <li><a href="cookies.html" tabindex="0" aria-current="page">Cookies</a></li>
+                    <li><a href="contact.html" tabindex="0">Contact us</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation">☰</button>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Cookie Policy</h1>
+            <p>Learn how we use cookies to enhance your browsing experience on our website.</p>
+        </div>
+    </section>
+    <section class="cookies">
+        <div class="container">
+            <div class="cookies-content">
+                <h2>Rootvana Cookie Policy</h2>
+                <p>Last Updated: June 1, 2023</p>
+                
+                <div class="cookies-section">
+                    <h3>1. Introduction to Cookies</h3>
+                    <div class="cookies-point">
+                        <p>Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently and to provide information to website owners. At Rootvana, we use cookies to enhance your browsing experience, analyze site usage, and assist in our marketing efforts. This policy explains what cookies are, how we use them, and how you can manage your cookie preferences. By continuing to use our website, you consent to our use of cookies in accordance with this policy.</p>
+                    </div>
+                    
+                    <h3>2. Types of Cookies We Use</h3>
+                    <div class="cookies-point">
+                        <p>We use several types of cookies on our website, each serving different purposes. Essential cookies are necessary for the website to function properly and cannot be switched off. Performance cookies help us understand how visitors interact with our website by collecting anonymous information. Functional cookies enable enhanced functionality and personalization. Targeting cookies are used to deliver content that is more relevant to you and your interests. We also use third-party cookies for various services like analytics and social media integration.</p>
+                    </div>
+                    
+                    <h3>3. Essential Cookies</h3>
+                    <div class="cookies-point">
+                        <p>Essential cookies are crucial for the basic functionality of our website. These cookies enable core features such as security, network management, and accessibility. Without these cookies, our website cannot function properly, and they are therefore always active. They do not store any personally identifiable information and are typically set in response to actions you take, such as setting your privacy preferences or filling in forms. You can set your browser to block these cookies, but some parts of the site may not work as a result.</p>
+                    </div>
+                    
+                    <h3>4. Performance Cookies</h3>
+                    <div class="cookies-point">
+                        <p>Performance cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us know which pages are the most and least popular and see how visitors move around the site. All information these cookies collect is aggregated and therefore anonymous. If you do not allow these cookies, we will not know when you have visited our site and will not be able to monitor its performance.</p>
+                    </div>
+                    
+                    <h3>5. Functional Cookies</h3>
+                    <div class="cookies-point">
+                        <p>Functional cookies enable the website to provide enhanced functionality and personalization. They may be set by us or by third-party providers whose services we have added to our pages. These cookies allow the website to remember choices you make (such as your username, language, or region) and provide enhanced, more personal features. They may also be used to provide services you have asked for, such as watching a video or commenting on a blog. If you do not allow these cookies, then some or all of these services may not function properly.</p>
+                    </div>
+                    
+                    <h3>6. Targeting Cookies</h3>
+                    <div class="cookies-point">
+                        <p>Targeting cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant advertisements on other sites. They work by uniquely identifying your browser and internet device. If you do not allow these cookies, you will experience less targeted advertising. These cookies are also used to limit the number of times you see an advertisement and help measure the effectiveness of advertising campaigns.</p>
+                    </div>
+                    
+                    <h3>7. Third-Party Cookies</h3>
+                    <div class="cookies-point">
+                        <p>In addition to our own cookies, we may also use various third-party cookies to report usage statistics of the website, deliver advertisements on and through the website, and so on. These cookies may be used by third-party services such as Google Analytics, Facebook, and other social media platforms. The third-party cookies used on our site include analytics cookies that help us understand how our website is being used and advertising cookies that help deliver relevant ads to you. We do not control the setting of these cookies, so please check the third-party websites for more information about their cookies and how to manage them.</p>
+                    </div>
+                    
+                    <h3>8. Cookie Duration</h3>
+                    <div class="cookies-point">
+                        <p>Cookies can remain on your computer or mobile device for different periods of time. Session cookies are temporary cookies that remain on your device until you leave our website. Persistent cookies remain on your device for much longer or until you manually delete them (how long the cookie remains on your device will depend on the duration or "lifetime" of the specific cookie and your browser settings). Some cookies expire at the end of your browser session, while others may be stored for longer periods on your device's hard drive.</p>
+                    </div>
+                    
+                    <h3>9. Managing Cookie Preferences</h3>
+                    <div class="cookies-point">
+                        <p>You can manage your cookie preferences through your browser settings at any time. Most web browsers allow some control of most cookies through the browser settings. You can set or amend your web browser controls to accept or refuse cookies. If you choose to disable cookies, please note that this may affect your ability to use certain features of our website. Each browser is different, so check the help menu of your browser for more information on how to change your cookie preferences. Additionally, you can visit www.allaboutcookies.org for more information on how to manage cookies across different browsers.</p>
+                    </div>
+                    
+                    <h3>10. Cookie Consent</h3>
+                    <div class="cookies-point">
+                        <p>When you visit our website for the first time, you will see a cookie consent banner that informs you about our use of cookies. This banner provides you with the option to accept or decline cookies. By clicking "Accept All Cookies," you consent to our use of all cookies as described in this policy. If you choose to decline cookies, only essential cookies will be set on your device. You can change your preferences at any time by accessing your browser settings.</p>
+                    </div>
+                    
+                    <h3>11. Changes to Our Cookie Policy</h3>
+                    <div class="cookies-point">
+                        <p>We may update our cookie policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any significant changes by posting a notice on our website or by other means. We encourage you to review this policy periodically to stay informed about our use of cookies and your options regarding cookies. Your continued use of our website after any changes to this policy will constitute your acceptance of such changes.</p>
+                    </div>
+                    
+                    <h3>12. Contact Us</h3>
+                    <div class="cookies-point">
+                        <p>If you have any questions about our cookie policy or our use of cookies, please contact us at the following:</p>
+                        <p>Email: info@rootvana.com<br>Phone: (123) 456-7890<br>Address: 70 Washington Square South, New York, NY 10012, United States</p>
+                    </div>
+                    
+                    <h3>13. Cookie Policy for Children</h3>
+                    <div class="cookies-point">
+                        <p>Our website is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under 13, we will take steps to delete such information from our records. If you are a parent or guardian and believe that your child has provided us with personal information, please contact us.</p>
+                    </div>
+                    
+                    <h3>14. Cookie Policy for EU Residents</h3>
+                    <div class="cookies-point">
+                        <p>If you are a resident of the European Union, you have specific rights regarding your personal data and cookies. Under the General Data Protection Regulation (GDPR), you have the right to access, rectify, or delete your personal data. You also have the right to restrict or object to the processing of your personal data. If you wish to exercise any of these rights, please contact us using the information provided above.</p>
+                    </div>
+                    
+                    <h3>15. Cookie Policy for California Residents</h3>
+                    <div class="cookies-point">
+                        <p>California residents have specific rights under the California Consumer Privacy Act (CCPA). You have the right to know what personal information we collect about you, the right to request deletion of your personal information, and the right to opt-out of the sale of your personal information. If you are a California resident and wish to exercise any of these rights, please contact us using the information provided above.</p>
+                    </div>
+                    
+                    <h3>16. Cookie Policy for Other Jurisdictions</h3>
+                    <div class="cookies-point">
+                        <p>Our cookie policy is designed to comply with applicable laws and regulations in various jurisdictions. If you are located in a jurisdiction with specific cookie laws, please be aware that we will take steps to comply with those laws. If you have questions about how our cookie policy applies to you, please contact us.</p>
+                    </div>
+                    
+                    <h3>17. Cookie Policy for Mobile Devices</h3>
+                    <div class="cookies-point">
+                        <p>Our cookie policy applies to both desktop and mobile devices. If you access our website from a mobile device, you may need to adjust your cookie preferences through your mobile browser settings. The process for managing cookies on mobile devices may differ from that on desktop computers. Please refer to your device's documentation for more information on how to manage cookies on mobile devices.</p>
+                    </div>
+                    
+                    <h3>18. Cookie Policy for Third-Party Websites</h3>
+                    <div class="cookies-point">
+                        <p>Our website may contain links to third-party websites that have their own cookie policies. We are not responsible for the content or practices of these websites. We encourage you to review the cookie policies of any third-party websites you visit. This cookie policy applies only to our website and does not cover the practices of third-party websites.</p>
+                    </div>
+                    
+                    <h3>19. Cookie Policy for Social Media</h3>
+                    <div class="cookies-point">
+                        <p>We may use social media plugins on our website that allow you to share content on social media platforms. These plugins may set cookies on your device. We do not control the use of these cookies, and we recommend that you review the cookie policies of the respective social media platforms for more information on their cookie practices.</p>
+                    </div>
+                    
+                    <h3>20. Cookie Policy for Analytics</h3>
+                    <div class="cookies-point">
+                        <p>We use analytics cookies to help us understand how our website is being used. These cookies collect information about your browsing behavior, such as the pages you visit and the time you spend on our site. This information is used to improve our website and enhance your user experience. If you do not allow these cookies, we will not be able to analyze your usage of our website.</p>
+                    </div>
+                    
+                    <h3>21. Cookie Policy for Advertising</h3>
+                    <div class="cookies-point">
+                        <p>We may use advertising cookies to deliver relevant advertisements to you based on your interests. These cookies track your browsing behavior across different websites and help us understand which ads are effective. If you choose to decline these cookies, you may still see advertisements, but they may not be relevant to you.</p>
+                    </div>
+                    
+                    <h3>22. Cookie Policy for Retargeting</h3>
+                    <div class="cookies-point">
+                        <p>Retargeting cookies allow us to show you ads based on your previous interactions with our website. For example, if you visit a product page but do not make a purchase, you may see ads for that product on other websites. These cookies help us remind you of products you may be interested in. If you decline these cookies, you may miss out on relevant ads.</p>
+                    </div>
+                    
+                    <h3>23. Cookie Policy for A/B Testing</h3>
+                    <div class="cookies-point">
+                        <p>We may use cookies for A/B testing to improve our website's performance. A/B testing involves showing different versions of a webpage to different users to determine which version performs better. Cookies help us track which version you were shown and how you interacted with it. If you decline these cookies, we may not be able to optimize our website as effectively.</p>
+                    </div>
+                    
+                    <h3>24. Cookie Policy for User Experience</h3>
+                    <div class="cookies-point">
+                        <p>Cookies play a crucial role in enhancing your user experience on our website. They help us remember your preferences, such as language settings and login information, so you don't have to re-enter them each time you visit. By allowing cookies, you can enjoy a more personalized experience tailored to your needs. If you decline cookies, you may have to manually adjust your preferences each time you visit.</p>
+                    </div>
+                    
+                    <h3>25. Cookie Policy for Security</h3>
+                    <div class="cookies-point">
+                        <p>Some cookies are used to enhance the security of our website. These cookies help us detect and prevent fraudulent activity and ensure that your data is protected. By allowing these cookies, you contribute to a safer browsing experience. If you decline these cookies, you may be at a higher risk of encountering security issues.</p>
+                    </div>
+                    
+                    <h3>26. Cookie Policy for Performance Monitoring</h3>
+                    <div class="cookies-point">
+                        <p>We use cookies to monitor the performance of our website and identify areas for improvement. These cookies help us track metrics such as page load times and user engagement. By allowing these cookies, you help us enhance the overall performance of our website. If you decline these cookies, we may not be able to gather valuable performance data.</p>
+                    </div>
+                    
+                    <h3>27. Cookie Policy for User Feedback</h3>
+                    <div class="cookies-point">
+                        <p>Cookies may be used to collect feedback from users about their experience on our website. This feedback helps us understand what users like and dislike, allowing us to make necessary improvements. By allowing these cookies, you contribute to the continuous enhancement of our website. If you decline these cookies, we may miss out on valuable insights from users.</p>
+                    </div>
+                    
+                    <h3>28. Cookie Policy for Marketing Analytics</h3>
+                    <div class="cookies-point">
+                        <p>Marketing analytics cookies help us understand the effectiveness of our marketing campaigns. These cookies track user interactions with our ads and website, allowing us to measure the return on investment of our marketing efforts. By allowing these cookies, you help us optimize our marketing strategies. If you decline these cookies, we may not be able to accurately assess our marketing performance.</p>
+                    </div>
+                    
+                    <h3>29. Cookie Policy for Customization</h3>
+                    <div class="cookies-point">
+                        <p>Cookies enable us to customize your experience on our website based on your preferences and behavior. For example, we can recommend products or content that align with your interests. By allowing cookies, you enhance the personalization of your browsing experience. If you decline these cookies, you may receive less tailored content and recommendations.</p>
+                    </div>
+                    
+                    <h3>30. Cookie Policy for Session Management</h3>
+                    <div class="cookies-point">
+                        <p>Session cookies are used to manage your session on our website. They help us remember your login status and preferences during your visit. By allowing session cookies, you can navigate our website more seamlessly. If you decline these cookies, you may experience interruptions in your session, requiring you to log in again or re-enter your preferences.</p>
+                    </div>
+                    
+                    <h3>31. Cookie Policy for User Authentication</h3>
+                    <div class="cookies-point">
+                        <p>Cookies are used to authenticate users and ensure that only authorized individuals can access certain features of our website. By allowing authentication cookies, you help us maintain the security of your account. If you decline these cookies, you may not be able to access certain areas of our website that require authentication.</p>
+                    </div>
+                    
+                    <h3>32. Cookie Policy for Data Analysis</h3>
+                    <div class="cookies-point">
+                        <p>We use cookies to analyze data related to user behavior on our website. This analysis helps us understand how users interact with our content and identify trends. By allowing these cookies, you contribute to our ability to improve our website based on user insights. If you decline these cookies, we may miss out on important data that could inform our decisions.</p>
+                    </div>
+                    
+                    <h3>33. Cookie Policy for User Engagement</h3>
+                    <div class="cookies-point">
+                        <p>Cookies help us measure user engagement on our website. By tracking interactions such as clicks and time spent on pages, we can assess the effectiveness of our content. By allowing these cookies, you help us create more engaging experiences for users. If you decline these cookies, we may not be able to accurately measure user engagement.</p>
+                    </div>
+                    
+                    <h3>34. Cookie Policy for Content Delivery</h3>
+                    <div class="cookies-point">
+                        <p>Cookies are used to deliver content to users based on their preferences and behavior. This ensures that users receive relevant information and recommendations. By allowing these cookies, you enhance the relevance of the content you see on our website. If you decline these cookies, you may receive less relevant content.</p>
+                    </div>
+                    
+                    <h3>35. Cookie Policy for User Preferences</h3>
+                    <div class="cookies-point">
+                        <p>Cookies help us remember your preferences, such as language settings and display options. By allowing these cookies, you can enjoy a more personalized experience on our website. If you decline these cookies, you may need to adjust your preferences each time you visit.</p>
+                    </div>
+                    
+                    <h3>36. Cookie Policy for User Support</h3>
+                    <div class="cookies-point">
+                        <p>Cookies may be used to enhance user support on our website. By tracking user interactions, we can identify common issues and improve our support resources. By allowing these cookies, you contribute to a better support experience for all users. If you decline these cookies, we may not be able to gather valuable feedback for improving our support.</p>
+                    </div>
+                    
+                    <h3>37. Cookie Policy for User Surveys</h3>
+                    <div class="cookies-point">
+                        <p>We may use cookies to conduct user surveys and gather feedback about our website. These cookies help us track responses and analyze the data collected. By allowing these cookies, you help us improve our website based on user feedback. If you decline these cookies, we may miss out on valuable insights from users.</p>
+                    </div>
+                    
+                    <h3>38. Cookie Policy for User Testing</h3>
+                    <div class="cookies-point">
+                        <p>Cookies may be used in user testing to gather data on how users interact with our website. This data helps us identify areas for improvement and optimize the user experience. By allowing these cookies, you contribute to our ability to enhance our website based on user testing results. If you decline these cookies, we may not be able to conduct effective user testing.</p>
+                    </div>
+                    
+                    <h3>39. Cookie Policy for User Retention</h3>
+                    <div class="cookies-point">
+                        <p>Cookies can help us retain users by remembering their preferences and login information. By allowing these cookies, you can enjoy a seamless experience on our website. If you decline these cookies, you may need to re-enter your information each time you visit, which could lead to a less satisfying experience.</p>
+                    </div>
+                    
+                    <h3>40. Cookie Policy for Future Updates</h3>
+                    <div class="cookies-point">
+                        <p>We may update our cookie policy in the future to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any significant changes by posting a notice on our website or by other means. We encourage you to review this policy periodically to stay informed about our use of cookies and your options regarding cookies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="cookie-consent">
+        <p>We use cookies to enhance your experience on our website. By clicking "Accept All Cookies," you consent to our use of cookies. You can manage your preferences by clicking "Manage Cookies."</p>
+        <div class="cookie-consent-buttons">
+            <button class="btn" onclick="acceptCookies()">Accept All Cookies</button>
+            <button class="btn btn-outline" onclick="declineCookies()">Manage Cookies</button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="mailto:info@rootvana.com">info@rootvana.com</a></li>
+                    <li><a href="tel:+1234567890">(123) 456-7890</a></li>
+                    <li>70 Washington Square South<br>New York, NY 10012</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Follow Us</h3>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Rootvana. All rights reserved.</p>
+        </div>
+        <div class="contact-info-footer">
+            <p>For inquiries, please contact us at:</p>
+            <p>Email: info@rootvana.com | Phone: (123) 456-7890</p>
+        </div>
+    </footer>
+    <script>
+        function acceptCookies() {
+            // Logic to accept cookies
+            document.querySelector('.cookie-consent').style.display = 'none';
+        }
+        
+        function declineCookies() {
+            // Logic to manage cookies
+            alert('You can manage your cookie preferences in your browser settings.');
+        }
+    </script>
+</body>
+</html>

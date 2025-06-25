@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Rootvana</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        :root {
+            --primary-color: #3a5a40;
+            --secondary-color: #588157;
+            --accent-color: #a3b18a;
+            --light-color: #dad7cd;
+            --text-color: #2f3e46;
+            --white: #ffffff;
+            --dark-green: #344e41;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            color: var(--dark-green);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            margin-top: 2rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Layout */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 4rem 0;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-right: 0.5rem;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .logo-slogan {
+            font-size: 1rem;
+            color: var(--secondary-color);
+            margin-top: -0.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav li {
+            margin-left: 1.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            padding: 0.5rem;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a[aria-current="page"] {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        nav a[aria-current="page"]::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('p2.jpeg') no-repeat center center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 8rem 0;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Privacy Content */
+        .privacy-content {
+            background-color: var(--white);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .privacy-section {
+            margin-bottom: 3rem;
+        }
+
+        .privacy-point {
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-green);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col a {
+            color: var(--light-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-col a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .footer-social a:hover {
+            background-color: var(--accent-color);
+            color: var(--dark-green);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-info-footer {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .contact-info-footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-active ul {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--white);
+                padding: 1rem;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-active li {
+                margin: 0 0 1rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            section {
+                padding: 2rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .privacy-content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🌱</span>
+                <span class="logo-text">Rootvana</span>
+                <span class="logo-slogan">Balance below. Beauty above.</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" tabindex="0">Home</a></li>
+                    <li><a href="privacy.html" tabindex="0" aria-current="page">Privacy</a></li>
+                    <li><a href="terms.html" tabindex="0">Terms & conditions</a></li>
+                    <li><a href="cookies.html" tabindex="0">Cookies</a></li>
+                    <li><a href="contact.html" tabindex="0">Contact us</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation">☰</button>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Privacy Policy</h1>
+            <p>Your privacy is important to us. Learn how we collect, use, and protect your personal information.</p>
+        </div>
+    </section>
+    <section class="privacy">
+        <div class="container">
+            <div class="privacy-content">
+                <h2>Rootvana Privacy Policy</h2>
+                <p>Last Updated: June 1, 2023</p>
+                
+                <div class="privacy-section">
+                    <h3>1. Introduction</h3>
+                    <div class="privacy-point">
+                        <p>Rootvana ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services. Please read this policy carefully to understand our practices regarding your information and how we will treat it. If you do not agree with our policies, you should not use our services.</p>
+                    </div>
+                    
+                    <h3>2. Information We Collect</h3>
+                    <div class="privacy-point">
+                        <p>We collect several types of information from and about users of our website, including personal information such as name, email address, phone number, and payment details. We also collect non-personal information like browser type, IP address, and browsing behavior. This information helps us improve our services and provide a better user experience. We may collect this information directly from you or automatically as you navigate through the site.</p>
+                    </div>
+                    
+                    <h3>3. How We Use Your Information</h3>
+                    <div class="privacy-point">
+                        <p>We use the information we collect to provide, maintain, and improve our services, process transactions, communicate with you, and personalize your experience. Your information helps us respond to your customer service requests and support needs more efficiently. We may also use your information to send periodic emails regarding your order or other products and services. You can opt-out of receiving these communications at any time.</p>
+                    </div>
+                    
+                    <h3>4. Information Sharing and Disclosure</h3>
+                    <div class="privacy-point">
+                        <p>We do not sell, trade, or otherwise transfer your personally identifiable information to outside parties without your consent, except to trusted third parties who assist us in operating our website or servicing you. These parties agree to keep this information confidential. We may also release information when appropriate to comply with the law, enforce our site policies, or protect ours or others' rights, property, or safety.</p>
+                    </div>
+                    
+                    <h3>5. Data Security</h3>
+                    <div class="privacy-point">
+                        <p>We implement a variety of security measures to maintain the safety of your personal information. These include encryption, firewalls, and secure socket layer technology. However, no method of transmission over the Internet or electronic storage is 100% secure, so we cannot guarantee absolute security. We encourage you to take precautions to protect your personal information when online.</p>
+                    </div>
+                    
+                    <h3>6. Cookies and Tracking Technologies</h3>
+                    <div class="privacy-point">
+                        <p>We use cookies and similar tracking technologies to track activity on our website and hold certain information. Cookies are files with small amounts of data that may include an anonymous unique identifier. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our site.</p>
+                    </div>
+                    
+                    <h3>7. Third-Party Links</h3>
+                    <div class="privacy-point">
+                        <p>Occasionally, at our discretion, we may include or offer third-party products or services on our website. These third-party sites have separate and independent privacy policies. We therefore have no responsibility or liability for the content and activities of these linked sites. Nonetheless, we seek to protect the integrity of our site and welcome any feedback about these sites.</p>
+                    </div>
+                    
+                    <h3>8. Children's Privacy</h3>
+                    <div class="privacy-point">
+                        <p>Our services are not directed to individuals under 13. We do not knowingly collect personal information from children under 13. If we become aware that a child under 13 has provided us with personal information, we will take steps to delete such information. If you become aware that a child has provided us with personal information, please contact us immediately.</p>
+                    </div>
+                    
+                    <h3>9. Your Rights and Choices</h3>
+                    <div class="privacy-point">
+                        <p>You have certain rights regarding your personal information, including the right to access, correct, or delete the data we hold about you. You may also have the right to restrict or object to certain processing activities. To exercise these rights, please contact us using the information provided below. We will respond to your request within a reasonable timeframe.</p>
+                    </div>
+                    
+                    <h3>10. International Data Transfers</h3>
+                    <div class="privacy-point">
+                        <p>Your information, including personal data, may be transferred to and maintained on computers located outside of your state, province, country, or other governmental jurisdiction where data protection laws may differ. By using our services, you consent to this transfer. We will take all steps reasonably necessary to ensure your data is treated securely and in accordance with this privacy policy.</p>
+                    </div>
+                    
+                    <h3>11. Data Retention</h3>
+                    <div class="privacy-point">
+                        <p>We will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our policies. The criteria we use to determine retention periods include the nature of the data and the purposes for which it is processed.</p>
+                    </div>
+                    
+                    <h3>12. Changes to This Privacy Policy</h3>
+                    <div class="privacy-point">
+                        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+                    </div>
+                    
+                    <h3>13. Contact Us</h3>
+                    <div class="privacy-point">
+                        <p>If you have any questions about this Privacy Policy, please contact us at info@rootvana.com or by mail at 70 Washington Square South, New York, NY 10012, United States. We will make every effort to resolve your concerns regarding our privacy practices. For complaints that cannot be resolved, you may have the right to lodge a complaint with the relevant data protection authority.</p>
+                    </div>
+ <h3>14. User Consent</h3>
+                    <div class="privacy-point">
+                        <p>By using our website, you consent to our Privacy Policy and agree to its terms. If you do not agree with the terms of this policy, please do not access the site. Your continued use of the site following the posting of changes to this policy will be deemed your acceptance of those changes.</p>
+                    </div>
+                    
+                    <h3>15. Opt-Out Options</h3>
+                    <div class="privacy-point">
+                        <p>You may opt-out of receiving future marketing communications from us by following the unsubscribe instructions included in each email or by contacting us directly. Please note that even if you opt-out, we may still send you non-promotional emails regarding your account or our ongoing business relations.</p>
+                    </div>
+                    
+                    <h3>16. Data Breach Procedures</h3>
+                    <div class="privacy-point">
+                        <p>In the event of a data breach, we will notify you and any applicable regulator of a breach where we are legally required to do so. We will take all reasonable steps to investigate the breach and mitigate any potential harm. Our response will include assessing the risk to your rights and freedoms and informing you of the breach if it poses a high risk.</p>
+                    </div>
+                    
+                    <h3>17. Data Protection Officer</h3>
+                    <div class="privacy-point">
+                        <p>We have appointed a Data Protection Officer (DPO) who is responsible for overseeing compliance with this Privacy Policy and applicable data protection laws. If you have any questions about this Privacy Policy or our data protection practices, please contact our DPO at dpo@rootvana.com.</p>
+                    </div>
+                    
+                    <h3>18. Privacy Policy for California Residents</h3>
+                    <div class="privacy-point">
+                        <p>If you are a California resident, you have specific rights under the California Consumer Privacy Act (CCPA). This includes the right to request information about the categories and specific pieces of personal information we have collected about you, the right to request deletion of your personal information, and the right to opt-out of the sale of your personal information. To exercise these rights, please contact us using the information provided above.</p>
+                    </div>
+                    
+                    <h3>19. GDPR Compliance</h3>
+                    <div class="privacy-point">
+                        <p>If you are a resident of the European Economic Area (EEA), you have certain data protection rights. Rootvana aims to take reasonable steps to allow you to correct, amend, delete, or limit the use of your Personal Data. If you wish to be informed about what Personal Data we hold about you and if you want it to be removed from our systems, please contact us.</p>
+                    </div>
+                    
+                    <h3>20. Data Minimization</h3>
+                    <div class="privacy-point">
+                        <p>We adhere to the principle of data minimization, which means we only collect personal information that is necessary for the purposes for which it is processed. We strive to limit the amount of personal data we collect and retain to what is strictly necessary to fulfill our obligations to you.</p>
+                    </div>
+                    
+                    <h3>21. Anonymization and Pseudonymization</h3>
+                    <div class="privacy-point">
+                        <p>We may use anonymization and pseudonymization techniques to protect your personal information. Anonymization involves removing identifiable information from data sets, while pseudonymization replaces private identifiers with fake identifiers. These techniques help us analyze data without compromising your privacy.</p>
+                    </div>
+                    
+                    <h3>22. Third-Party Service Providers</h3>
+                    <div class="privacy-point">
+                        <p>We may employ third-party companies and individuals to facilitate our services ("Service Providers"), provide the service on our behalf, perform service-related services, or assist us in analyzing how our service is used. These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.</p>
+                    </div>
+                    
+                    <h3>23. Marketing Communications</h3>
+                    <div class="privacy-point">
+                        <p>We may use your personal information to contact you with newsletters, marketing or promotional materials, and other information that may be of interest to you. You can opt-out of receiving any, or all, of these communications from us by following the unsubscribe link or instructions provided in any email we send.</p>
+                    </div>
+                    
+                    <h3>24. User-Generated Content</h3>
+                    <div class="privacy-point">
+                        <p>If you post comments, reviews, or other content on our website, that information may be publicly visible. We are not responsible for the privacy practices of other users who may view and use that information. We encourage you to be mindful of the information you choose to disclose in these public areas.</p>
+                    </div>
+                    
+                    <h3>25. Social Media Features</h3>
+                    <div class="privacy-point">
+                        <p>Our website may include social media features, such as the Facebook Like button and widgets, such as the Share this button or interactive mini-programs that run on our site. These features may collect your IP address, which page you are visiting on our site, and may set a cookie to enable the feature to function properly. Your interactions with these features are governed by the privacy policy of the company providing it.</p>
+                    </div>
+                    
+                    <h3>26. International Users</h3>
+                    <div class="privacy-point">
+                        <p>If you are accessing our services from outside the United States, please be aware that your information may be transferred to, stored, and processed in the United States where our servers are located and our central database is operated. By using our services, you consent to the transfer of your information to the United States and the use and disclosure of your information in accordance with this Privacy Policy.</p>
+                    </div>
+                    
+                    <h3>27. Changes to Your Personal Information</h3>
+                    <div class="privacy-point">
+                        <p>You are responsible for ensuring that your personal information is accurate and up to date. If your personal information changes, please notify us promptly. We will take reasonable steps to update or correct your information upon request.</p>
+                    </div>
+                    
+                    <h3>28. Legal Basis for Processing Personal Data</h3>
+                    <div class="privacy-point">
+                        <p>We will process your personal data only when we have a legal basis to do so. This includes processing your data when you have given consent, when we need to perform a contract with you, or when we have a legitimate interest in processing your data that is not overridden by your rights.</p>
+                    </div>
+                    
+                    <h3>29. Data Protection Impact Assessments</h3>
+                    <div class="privacy-point">
+                        <p>We conduct Data Protection Impact Assessments (DPIAs) when required by law to evaluate the impact of our processing activities on the protection of personal data. This helps us identify and mitigate any potential risks to your privacy and data protection rights.</p>
+                    </div>
+                    
+                    <h3>30. Privacy Policy Updates</h3>
+                    <div class="privacy-point">
+                        <p>We may update our Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. We encourage you to review this Privacy Policy periodically for any changes.</p>
+                    </div>
+                    
+                    <h3>31. User Rights Under CCPA</h3>
+                    <div class="privacy-point">
+                        <p>California residents have the right to request information about the categories and specific pieces of personal information we have collected about them, the right to request deletion of their personal information, and the right to opt-out of the sale of their personal information. To exercise these rights, please contact us using the information provided above.</p>
+                    </div>
+                    
+                    <h3>32. User Rights Under GDPR</h3>
+                    <div class="privacy-point">
+                        <p>Under the General Data Protection Regulation (GDPR), you have the right to access, rectify, erase, restrict, and object to the processing of your personal data. You also have the right to data portability. To exercise these rights, please contact us using the information provided above.</p>
+                    </div>
+                    
+                    <h3>33. Data Breach Notification</h3>
+                    <div class="privacy-point">
+                        <p>In the event of a data breach, we will notify you and any applicable regulator of a breach where we are legally required to do so. We will take all reasonable steps to investigate the breach and mitigate any potential harm. Our response will include assessing the risk to your rights and freedoms and informing you of the breach if it poses a high risk.</p>
+                    </div>
+                    
+                    <h3>34. Data Protection Training</h3>
+                    <div class="privacy-point">
+                        <p>We provide data protection training to our employees to ensure they understand their responsibilities regarding personal data and comply with our privacy policies and applicable laws. This training helps us maintain a culture of privacy and data protection within our organization.</p>
+                    </div>
+                    
+                    <h3>35. Privacy by Design</h3>
+                    <div class="privacy-point">
+                        <p>We implement privacy by design principles in our operations, which means we consider privacy and data protection from the outset of any project or initiative. This proactive approach helps us identify and mitigate privacy risks before they arise.</p>
+                    </div>
+                    
+                    <h3>36. Privacy Notices</h3>
+                    <div class="privacy-point">
+                        <p>We may provide additional privacy notices or policies in connection with specific services or activities. These notices will provide more detailed information about how we handle your personal information in those specific contexts.</p>
+                    </div>
+                    
+                    <h3>37. Contact Information</h3>
+                    <div class="privacy-point">
+                        <p>If you have any questions about this Privacy Policy, please contact us at info@rootvana.com or by mail at 70 Washington Square South, New York, NY 10012, United States. We will make every effort to resolve your concerns regarding our privacy practices.</p>
+                    </div>
+                    
+                    <h3>38. Complaints</h3>
+                    <div class="privacy-point">
+                        <p>If you believe that we have not complied with this Privacy Policy or applicable data protection laws, you have the right to lodge a complaint with the relevant data protection authority. We encourage you to contact us first to resolve your concerns before escalating the matter.</p>
+                    </div>
+                    
+                    <h3>39. Effective Date</h3>
+                    <div class="privacy-point">
+                        <p>This Privacy Policy is effective as of June 1, 2023. We may update this policy from time to time, and we will notify you of any changes by posting the new policy on this page. Your continued use of our services after any changes to this policy will constitute your acceptance of the new terms.</p>
+                    </div>
+                    
+                    <h3>40. Conclusion</h3>
+                    <div class="privacy-point">
+                        <p>Your privacy is important to us, and we are committed to protecting your personal information. We encourage you to review this Privacy Policy regularly to stay informed about our practices. If you have any questions or concerns, please do not hesitate to contact us.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Follow Us</h3>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="contact-info-footer">
+            <p>70 Washington Square South, New York, NY 10012, United States</p>
+            <p>(123) 456-7890</p>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Rootvana. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
